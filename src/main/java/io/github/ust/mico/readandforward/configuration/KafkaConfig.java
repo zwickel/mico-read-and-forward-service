@@ -1,11 +1,12 @@
 package io.github.ust.mico.readandforward.configuration;
 
-import lombok.Getter;
-import lombok.Setter;
+import javax.validation.constraints.NotBlank;
+
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-import javax.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Configuration of the kafka connection.
@@ -29,8 +30,8 @@ public class KafkaConfig {
     private String inputTopic;
 
     /**
-     * The group id is a string that uniquely identifies the group
-     * of consumer processes to which this consumer belongs.
+     * The group id is a string that uniquely identifies the group of consumer
+     * processes to which this consumer belongs.
      */
     @NotBlank
     private String groupId;
